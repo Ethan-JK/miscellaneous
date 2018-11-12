@@ -9,6 +9,4 @@ for number in range(2, 100):
     else:
         primes.append(number)
 
-differences = []
-for prime1, prime2 in zip(primes, primes[1:]):
-    differences.append(prime2 - prime1)
+differences = [prime2 - prime1 for prime1, prime2 in zip(primes, primes[1:])
